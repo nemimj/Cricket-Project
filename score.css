@@ -1,0 +1,140 @@
+:root{
+    --upper:capitalize;
+}
+
+*{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: url(images/cricket.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+
+
+}
+h1,span{
+    color: white;
+    font-size: 3.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+h1{
+    display: inline;
+}
+
+
+.team{
+    color:aquamarine;
+    text-transform: var(--upper);
+}
+
+.choice{
+    color:aquamarine;
+    text-transform: var(--upper);
+}
+
+
+
+.scoreBoard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.overs{
+    display: flex;
+    justify-content: center;
+}
+.overs input{
+    font-size: 3rem;
+    font-weight: 500;
+    width: 100px;
+    padding: 0.5rem;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: 0;
+}
+
+.overs input:first-of-type{
+    text-align: right;
+}
+
+.runs{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+.runs button{
+    background-color: #bef264;
+    padding: 0.2rem 0.5rem;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    border: 0;
+    width: 70px;
+}
+
+.runs button:last-of-type{
+    font-weight: 500;
+    color: white;
+    width: 60%;
+    text-transform: uppercase;
+    padding:0.5rem;
+    background-color: #ef4444;
+}
+
+
+#second-ing{
+    display: none;
+    background: #38bff8d7;
+    padding: 0.8rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    border: 0;
+    position: relative;
+    z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+#second-ing::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-240px);
+    background-color: rgba(255, 255, 0, 0.684);
+    z-index: -1;
+    transition: all 0.5s linear;
+}
+
+#second-ing:hover::before{
+    transform: translateX(0);
+}
+
+h2{
+    display: none;
+    background: #00000094;
+    color: white;
+    padding: 0.5rem;
+    font-size: 2.3rem;
+    border-radius: 10px;
+    box-shadow: 0px 9px 30px rgba(255, 149, 5, 0.1);
+}

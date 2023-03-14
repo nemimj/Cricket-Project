@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="score.css" />
+    <title>Score</title>
+  </head>
+  <body>
+    <div class="scoreBoard">
+      <h2>Target:180</h2>
+      <span id="h1">Civil 6th sem: </span>
+      <h1>0/0</h1>
+      <div class="overs">
+        <input type="text" value="0.0" class="over" id="ballToBall" disabled />
+        <input type="text" value="/5" class="over" id="overToOver" disabled />
+      </div>
+
+      <div class="runs">
+        <button onclick="run('4')">4</button>
+        <button onclick="run('6')">6</button>
+        <button onclick="run('0')">0</button>
+        <button onclick="run('1')">1</button>
+        <button onclick="run('2')">2</button>
+        <button onclick="run('3')">3</button>
+        <button id="wicket" onclick="run('1',true)">w</button>
+      </div>
+    </div>
+    <button id="second-ing">2nd Innings</button>
+    <script src="score.js" type="text/javascript"></script>
+  </body>
+</html>
