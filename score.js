@@ -4,7 +4,7 @@ let choice = window.localStorage.getItem('choice');
 let toss = window.localStorage.getItem('toss');
 let heading = document.getElementById('h1')
 let secondIng = document.getElementById('second-ing');
-let btw = window.localStorage.getItem('wbt');
+let count = 0;
 
 
 
@@ -50,10 +50,17 @@ function run(runs,wic = false){
     if(wicket <11){
           
             if(ballToBall.value === '5.0'){
-               secondIng.style.display = "block";
-               totalScore = heading.innerText.split('/')[0];
-               window.localStorage.setItem('totalScore',totalScore)
-               return;
+                if(count === 0){
+                    secondIng.style.display = "block";
+                    totalScore = heading.innerText.split('/')[0];
+                    window.localStorage.setItem('totalScore',totalScore)
+                    count++;
+                    return;
+                }
+
+                else{
+                    alert("Match Over")
+                }
 
             }
             else{
@@ -85,6 +92,8 @@ whoToBat()
 
 
 secondIng.addEventListener('click',()=>{
-    secondInnings();
-    secondIng.style.display = "none"
+        secondInnings();
+        secondIng.style.display = "none"
+    
+   
    })
