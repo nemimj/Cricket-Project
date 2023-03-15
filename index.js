@@ -53,16 +53,23 @@ play.addEventListener('click',()=>{
 
 btn.addEventListener('click',()=>{
     if(teamA.value && teamB.value){
-        let arr = [teamA.value,teamB.value]
-        let random = Math.floor(Math.random()*2)
-        window.localStorage.setItem('toss',random)
-        btn.innerText = "Loading..."
-        setTimeout(() => {
-            btn.innerText = "Toss"
-            tossWin.innerHTML = `<strong>${arr[random]}</strong> Team won the toss`
-            batBall(arr[random]);
-        }, 3000);
-       
+        if(teamA.value === teamB.value){
+            alert("Both Team names can't be same.");
+            return;
+        }
+        else{
+            let arr = [teamA.value,teamB.value]
+            let random = Math.floor(Math.random()*2)
+            window.localStorage.setItem('toss',random)
+            btn.innerText = "Loading..."
+            setTimeout(() => {
+                btn.innerText = "Toss"
+                tossWin.innerHTML = `<strong>${arr[random]}</strong> Team won the toss`
+                batBall(arr[random]);
+            }, 3000);
+           
+        }
+     
     }
     else{
        alert('Please enter team name')
