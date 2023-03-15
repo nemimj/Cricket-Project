@@ -59,7 +59,7 @@ function run(runs,wic = false){
                 }
 
                 else{
-                    alert("Match Over")
+                    return;
                 }
 
             }
